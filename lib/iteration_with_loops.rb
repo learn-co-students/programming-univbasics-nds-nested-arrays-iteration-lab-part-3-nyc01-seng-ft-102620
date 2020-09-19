@@ -1,4 +1,17 @@
-def join_nested_strings(src)
-  # src will be an Array of Arrays of Strings and Integers
-  # Combine all Strings present in the AoA into a single value and return it
-end
+def join_nested_strings(mixed_data_1)
+  total = []
+  row_index = 0
+  while row_index < mixed_data_1.count do
+    element_index = 0
+    while element_index < mixed_data_1[row_index].count do
+      if mixed_data_1[row_index][element_index].class == String 
+      total.push(mixed_data_1[row_index][element_index])
+    end 
+      element_index += 1
+    end 
+  row_index+=1
+  end
+  total.join(" ")
+end 
+ 
+
